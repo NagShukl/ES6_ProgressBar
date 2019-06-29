@@ -15,7 +15,7 @@ export default class ProgressBar {
         this.getOriginalData();
     }
     getOriginalData = () => {
-        //document.getElementById('orgData').innerHTML = JSON.stringify(this.pBarModel);
+        document.getElementById('orgData').innerHTML = JSON.stringify(this.pBarModel);
     }
     updateProgressBar = (evt) => {
 
