@@ -1,0 +1,97 @@
+body {
+  color: #fff;
+  padding: 1%;
+  background-color: #363535; }
+  body section ul {
+    list-style-type: square; }
+  body section #orgData {
+    font-size: 17px; }
+    body section #orgData::before {
+      content: "Data:";
+      font-weight: bolder;
+      margin-right: 10px; }
+  body .appContainer .pbar-container {
+    padding: 1%;
+    background-color: #1b1616;
+    border: 1px solid;
+    box-shadow: 15px 2px 40px 2px lightgray;
+    border-radius: 15px; }
+    body .appContainer .pbar-container .pbar-wrapper {
+      background-color: #000;
+      border: thin solid #f89090;
+      height: 30px;
+      margin: 15px; }
+      body .appContainer .pbar-container .pbar-wrapper .value-div {
+        position: relative;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        text-align: center;
+        height: 30px;
+        vertical-align: middle;
+        z-index: 10; }
+      body .appContainer .pbar-container .pbar-wrapper .pbar {
+        position: relative;
+        top: -30px;
+        left: 0px;
+        background-color: #ABCDEF;
+        height: 100%;
+        z-index: 5;
+        animation-duration: 0.7s; }
+      body .appContainer .pbar-container .pbar-wrapper .pbar-below0 {
+        width: 0%; }
+      body .appContainer .pbar-container .pbar-wrapper .pbar-above100 {
+        width: 100%;
+        background-color: #e01616; }
+  body .appContainer .btn-container ul {
+    width: 100%;
+    padding: 1%;
+    justify-content: center;
+    text-align: center; }
+    body .appContainer .btn-container ul li {
+      list-style-type: none;
+      display: inline-flex;
+      width: auto;
+      height: 2em;
+      margin: 5px;
+      text-align: center;
+      background-color: red; }
+      body .appContainer .btn-container ul li input[type="button"] {
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        transition: 0.3s; }
+        body .appContainer .btn-container ul li input[type="button"]:hover {
+          background-color: #363535;
+          color: white; }
+      body .appContainer .btn-container ul li select {
+        background-color: lightgray;
+        height: 100%;
+        padding: 7px; }
+        body .appContainer .btn-container ul li select:hover {
+          background-color: #363535;
+          color: white; }
+  body .info {
+    font-size: 0.8rem; }
+  body header {
+    height: 38px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: #000;
+    width: 100%; }
+    body header div {
+      width: 100%;
+      text-align: center;
+      vertical-align: middle;
+      font-size: 30px;
+      font-weight: bolder; }
+      body header div img {
+        float: left;
+        margin: 5px; }
+  body .main-container {
+    margin-top: 40px; }
+
+
+/*# sourceMappingURL=bundle.css.map*/
