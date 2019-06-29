@@ -3,6 +3,7 @@
 
 
 Pure ES6 Implementation of ProgressBar, made it complex enough to thouch various aspect of a frontend framework should have. Its updated only minimal DOM, when change triggers.
+100% responsive, No external CSS library. 
 (Underconstruction Functionally working, fixing issues on test with Jasmin/karma configuration)
 
 

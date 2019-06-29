@@ -1,5 +1,5 @@
 {
-  "name": "ES6 ProgressBar",
+  "name": "ES6-ProgressBar",
   "version": "1.0.0",
   "description": "Pure ES6 Implementation of ProgressBar, made it complex enough to thouch various aspect of a frontend framework should have. Its updated only minimal DOM, when change triggers",
   "scripts": {
