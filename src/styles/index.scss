@@ -9,6 +9,7 @@ body {
   color: $body-color;
   padding: 1%;
   background-color: $body-background-color;
+  overflow-x: hidden;
   section {
       ul { 
           list-style-type: square;

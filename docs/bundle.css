@@ -1,7 +1,8 @@
 body {
   color: #fff;
   padding: 1%;
-  background-color: #363535; }
+  background-color: #363535;
+  overflow-x: hidden; }
   body section ul {
     list-style-type: square; }
   body section #orgData {
