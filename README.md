@@ -1,8 +1,9 @@
 # Webpack Frontend Starterkit
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/wbkd/webpack-starter.svg)](https://greenkeeper.io/)
 
-A lightweight foundation for your next webpack based frontend project.
+
+Pure ES6 Implementation of ProgressBar, made it complex enough to thouch various aspect of a frontend framework should have. Its updated only minimal DOM, when change triggers.
+(Underconstruction Functionally working, fixing issues on test with Jasmin/karma configuration)
 
 
 ### Installation
@@ -17,8 +18,12 @@ npm install
 npm start
 ```
 
-### Build Prod Version
+### Execute Test
+```
+npm test
+```
 
+### Build Prod Version
 ```
 npm run build
 ```
