@@ -5,7 +5,7 @@ export default class ProgressBarApp {
     progressBar;
     constructor(rootEleId) {
         this.pBarModel = {};
-        this.pBarModel.bars = [-20, 300, 40, 50, 45, 32, 65];
+        this.pBarModel.bars = [10, 300, 40, 50, 45, 32, -5];
         this.pBarModel.buttons = [-20, 30, -40, 50, -45, 32, -65];
         this.pBarModel.limit = 200;
         
