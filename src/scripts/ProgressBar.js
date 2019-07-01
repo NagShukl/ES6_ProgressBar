@@ -57,7 +57,6 @@ export default class ProgressBar {
         return { 'html': html, 'animate': animateBar };
     };
     getBar = (ele, index) => {
-        console.log('getBar is called');
         return `<div class="value-div" id="content_${this.getBarId(index)}">${this.getPerentage(ele)}%</div>
         <div id="pBar_${this.getBarId(index)}" class="${this.getBarCssClass(ele)}" style="width: ${this.getPerentageStyle(ele)}%; animation-name: ${this.barAnimation_prefix}${ele};">&nbsp;</div>
      `;
@@ -97,7 +96,6 @@ export default class ProgressBar {
      * for optimal performance - its important that if an animation definition is already generated then it should not be generated again.
      */
     animateBar = (ele) => {
-        console.log(ele + ' : ' + this.cachedPercentage);
         const value = this.getPerentageStyle(ele);
         if (!(value in this.cachedPercentage)) {
             return `@keyframes ${this.barAnimation_prefix}${ele} {
