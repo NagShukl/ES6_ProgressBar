@@ -3,7 +3,7 @@ import ButtonPanel from './ButtonPanel';
 const model = {"bars":[10,300,40,50,45,32,-5],"buttons":[-20,30,-40,50,-45,32,-65],"limit":200};
 
 export default class ProgressBarApp {
-    
+    pBarModel;
     constructor(rootEle) {
         this.rootEle = rootEle;
         this.pBarModel = model;

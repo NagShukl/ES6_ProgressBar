@@ -1,5 +1,5 @@
 import ProgressBarApp from '../../src/scripts/index';
-import ProgressBar from '../../src/scripts/ProgressBar';
+// import triggerEvent from 'trigger-event';
 
 const model = { "bars": [10, 300, 40, 50, 45, 32, -5], "buttons": [-20, 30, -40, 50, -45, 32, -65], "limit": 200 };
 
@@ -78,5 +78,41 @@ describe("ProgressBarApp ", function () {
       expect(item.value).toBe('' + model.buttons[index]);
     });
   });
-
+  describe('Button click', () => {
+    let progressBarApp;
+    beforeAll(() => {
+      const orgData = document.createElement('div');
+      orgData.id = 'orgData';
+      document.body.appendChild(orgData);
+      const appContainer = document.createElement('div');
+      appContainer.id = 'appContainer';
+      document.body.appendChild(appContainer);
+      progressBarApp = new ProgressBarApp(appContainer);
+      progressBarApp.pBarModel = model;
+      progressBarApp.initBars();
+    });
+  
+    it('should update value', () => {
+      const performAction = (barId, btnId) => {
+        let ele = document.getElementById('btnContainer');
+        // trigger Bar Selection change
+        const sel = document.getElementById('btnContainer').getElementsByTagName('select')[0];
+        sel.selectedIndex = barId; 
+        sel.dispatchEvent(new Event('change'));
+        // get list of all buttons
+        ele = ele.querySelectorAll('input[type="button"]');
+        // get old value of bar.
+        const oldValue = progressBarApp.pBarModel.bars[barId];
+        // trigger click event on button
+        ele[btnId].click();
+        //verify changes in model.
+        expect(progressBarApp.pBarModel.bars[barId]).toBe(oldValue + model.buttons[btnId]);
+      }
+     performAction(0,1);
+     performAction(0,1);
+     performAction(1,1);
+     performAction(2,2);
+     performAction(3,2);
+    });
+  });
 });
