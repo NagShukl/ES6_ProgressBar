@@ -1,27 +1,27 @@
 import ProgressBar from './ProgressBar';
 import ButtonPanel from './ButtonPanel';
-const model = {"bars":[10,300,40,50,45,32,-5],"buttons":[-20,30,-40,50,-45,32,-65],"limit":200};
+const model = { "bars": [10, 300, 40, 50, 45, 32, -5], "buttons": [-20, 30, -40, 50, -45, 32, -65], "limit": 200 };
 
 export default class ProgressBarApp {
     pBarModel;
     constructor(rootEle) {
         this.rootEle = rootEle;
         this.pBarModel = model;
-        
+
         this.progressBar = new ProgressBar();
         this.buttonPanel = new ButtonPanel();
     }
     init = () => {
-        fetch('http://pb-api.herokuapp.com_/bars').then(response => response.json())
-        .then(data => {
-            this.pBarModel = data;
-           this.initBars();            
-        }).catch(error => {
-            console.log('Error loading data from api!!! using mock data');
-            this.initBars();  
-        });
+        fetch('http://pb-api.herokuapp.com/bars').then(response => response.json())
+            .then(data => {
+                this.pBarModel = data;
+                this.initBars();
+            }).catch(error => {
+                console.log('Error loading data from api!!! using mock data');
+                this.initBars();
+            });
 
-        
+
     }
     initBars = () => {
         const pbarDiv = this.createElement('barContainer', 'pbar-container');
@@ -39,11 +39,11 @@ export default class ProgressBarApp {
     }
 }
 
-try{
-    if(ProgressBarApp)
-    (function(){ 
-        new ProgressBarApp(document.getElementById('appContainer')).init();
-    })(); 
-}catch(e){alert('ProgressBarApp not loaded')}
+try {
+    if (ProgressBarApp)
+        (function () {
+            new ProgressBarApp(document.getElementById('appContainer')).init();
+        })();
+} catch (e) { alert('ProgressBarApp not loaded') }
 
 

@@ -92,7 +92,7 @@ describe("ProgressBarApp ", function () {
       progressBarApp.initBars();
     });
   
-    it('should update value', () => {
+    it('should update value as per button and bar selection', () => {
       const performAction = (barId, btnId) => {
         let ele = document.getElementById('btnContainer');
         // trigger Bar Selection change

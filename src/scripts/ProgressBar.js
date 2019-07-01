@@ -86,7 +86,7 @@ export default class ProgressBar {
     getPerentage(value) {
         if (value <= 0)
             return 0;
-        const res = (value * 100) / this.limit;
+        const res = Math.round((value * 100) / this.limit);
         // Update this value in cachedPercentages set, to verify it animation definition for this % is there or not;
         this.cachedPercentage.add(res);
         return res;
