@@ -3,7 +3,7 @@
 
 
 Pure ES6 Implementation of ProgressBar, made it complex enough to thouch various aspect of a frontend framework should have. Its updated only minimal DOM, when change triggers.
-* Have a look at [working demo](https://nagshukl.github.io/ES6_ProgressBar/index.html)
+* Have a look at [working demo](https://nagshukl.github.io/ES6_ProgressBar)
 * Plain JavaScript (ES 6), No external Library
 * 100% responsive, No use of any external css
 * npm, SAAS, Web Pack, Minifying
