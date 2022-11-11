@@ -49,6 +49,6 @@
   "dependencies": {
     "@babel/polyfill": "^7.4.0",
     "core-js": "^3.0.1",
-    "webpack-karma-jasmine": "^3.0.3"
+    "webpack-karma-jasmine": "^4.0.0"
   }
 }
